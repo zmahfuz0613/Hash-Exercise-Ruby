@@ -47,7 +47,15 @@ general_assembly[:campuses] = {
 # ga[:topics].count => 7
 binding.pry
 # What number topic is 'Web Development'?
+general_assembly[:topics].index('Web Developement')
 # How many cities does GA have campuses in?
+general_assembly[:campuses].length
+general_assembly[:campuses].size
 # How many campuses does GA have?
+general_assembly[:campuses].reduce(0){|acc, city|acc + city.length}
+general_assembly[:campuses].values.flatten.length
 # How many campuses does GA have in Berlin?
+general_assembly[:campuses][:berlin].size
+
 # Print out all GA's campuses addresses
+general_assembly[:campuses].values.flatten.each{|campus|p campus[:address]}
